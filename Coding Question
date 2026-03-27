@@ -1,0 +1,54 @@
+Q.1) Discount Calculator
+Problem Statement
+
+You are given a purchase amount. Based on the amount, a discount is applied as follows:
+
+Discount Rules
+
++---------------------------+----------+
+| Purchase Amount Condition | Discount |
++---------------------------+----------+
+| Amount < 1000 | 5% |
+| 1000 ≤ Amount < 5000 | 10% |
+| Amount ≥ 5000 | 15% |
++---------------------------+----------+
+
+Task ---
+
+Calculate the final payable amount after applying the discount.
+
+Input Format ---- 
+
++----------------+------------------------------+
+| Input | Description |
++----------------+------------------------------+
+| amount | Total purchase value (integer)|
++----------------+------------------------------+
+
+Output Format ---
++----------------+----------------------------------------------+
+| Final Amount | Print final amount after discount (2 decimal)|
++----------------+----------------------------------------------+
+
+Example ---
+       Input - 2000
+       Output - 1800.00
+
+Code -------------
+
+# Step 1: Take input from user
+amount = int(input("Enter purchase amount: "))
+
+# Step 2: Apply discount based on conditions
+if amount < 1000:
+    discount = 0.05   # 5%
+elif amount >= 1000 and amount < 5000:
+    discount = 0.10   # 10%
+else:
+    discount = 0.15   # 15%
+
+# Step 3: Calculate final amount
+final_amount = amount - (amount * discount)
+
+# Step 4: Print result rounded to 2 decimal places
+print("Final payable amount: {:.2f}".format(final_amount))
